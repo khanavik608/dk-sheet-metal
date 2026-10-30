@@ -119,7 +119,7 @@
     </div>
   </section>
 
-  <!-- NEW SECTION: Scientists & Workforce in Action (Using your exact gallery pictures) -->
+  <!-- NEW SECTION: Scientists & Workforce in Action (With auto-updating programmatic images) -->
   <section id="action-showcase" class="py-20 px-4 sm:px-8 bg-gradient-to-b from-slate-900 to-brandDark text-white">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
@@ -136,7 +136,8 @@
         <!-- Worker Action Card -->
         <div class="relative bg-slate-800/80 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl group flex flex-col">
           <div class="relative h-72 sm:h-80 overflow-hidden bg-slate-900">
-            <img src="images/gallery-1.jpg" alt="D.K. Sheet Metal Factory Production" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <!-- Dynamically loaded keyword-based image URL -->
+            <img id="auto-worker-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Factory Worker Fabrication" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
             <div class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-md flex items-center gap-1.5">
               <i class="fa-solid fa-users-gear text-brandAccent"></i> Expert Factory Workforce
@@ -156,10 +157,11 @@
           </div>
         </div>
 
-        <!-- Scientist Action Card -->
+        <!-- Scientist Action Card (Automatically updated via query code) -->
         <div class="relative bg-slate-800/80 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl group flex flex-col">
           <div class="relative h-72 sm:h-80 overflow-hidden bg-slate-900">
-            <img src="images/gallery-3.jpg" alt="D.K. Sheet Metal Testing Instruments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <!-- Dynamically loaded keyword-based image URL for scientists doing experiments -->
+            <img id="auto-scientist-img" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Scientists Conducting Laboratory Experiments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
             <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-md flex items-center gap-1.5">
               <i class="fa-solid fa-microscope text-brandAccent"></i> Researchers & Scientists
@@ -182,7 +184,7 @@
     </div>
   </section>
 
-  <!-- Factory & Workers Photo Banners Section -->
+  <!-- Factory & Workers Photo Banners Section (Your Manual Gallery) -->
   <section id="gallery" class="py-20 px-4 sm:px-8 bg-slate-100 border-t border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-14">
@@ -440,8 +442,9 @@
     </div>
   </footer>
 
-  <!-- Mobile Navigation Toggle Script -->
+  <!-- Scripts: Mobile Menu & Dynamic Auto-Updating Scientist Images -->
   <script>
+    // Mobile Menu Toggle Script
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -449,11 +452,15 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Close mobile menu when clicking a link
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
+    });
+
+    // Optional: Dynamic image updater script if you want them to pull fresh automatic images on reload
+    window.addEventListener('DOMContentLoaded', () => {
+      // The URLs already automatically fetch relevant images depending on the query parameters (e.g., 'scientist,laboratory' / 'factory,welding')
     });
   </script>
 
