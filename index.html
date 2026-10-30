@@ -52,13 +52,28 @@
       </div>
       <nav class="hidden md:flex gap-8 font-medium text-sm text-slate-600">
         <a href="#about" class="hover:text-brandBlue transition">About Us</a>
+        <a href="#action-showcase" class="hover:text-brandBlue transition">Science & Workforce</a>
         <a href="#gallery" class="hover:text-brandBlue transition">Factory Banners</a>
         <a href="#products" class="hover:text-brandBlue transition">Products</a>
         <a href="#contact" class="hover:text-brandBlue transition">Contact Us</a>
       </nav>
-      <a href="#contact" class="bg-brandBlue hover:bg-brandDark text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200">
-        Get Quote
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden sm:inline-block bg-brandBlue hover:bg-brandDark text-white px-5 py-2.5 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+          Get Quote
+        </a>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2 rounded-lg hover:bg-slate-100">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3 font-medium text-sm">
+      <a href="#about" class="block py-2 text-slate-700 hover:text-brandBlue">About Us</a>
+      <a href="#action-showcase" class="block py-2 text-slate-700 hover:text-brandBlue">Science & Workforce</a>
+      <a href="#gallery" class="block py-2 text-slate-700 hover:text-brandBlue">Factory Banners</a>
+      <a href="#products" class="block py-2 text-slate-700 hover:text-brandBlue">Products</a>
+      <a href="#contact" class="block py-2 text-slate-700 hover:text-brandBlue">Contact Us</a>
     </div>
   </header>
 
@@ -101,6 +116,69 @@
       <p class="text-slate-600 mt-4 leading-relaxed">
         Based in Howrah, D. K. Sheet Metal is an ISO 9001:2015 certified manufacturer specializing in custom-engineered laboratory solutions. From heavy-duty fume extraction to precision particle sieves and chemical gas lines, we supply scientific testing infrastructure built to exact specifications.
       </p>
+    </div>
+  </section>
+
+  <!-- NEW SECTION: Scientists & Workforce in Action (Using your exact gallery pictures) -->
+  <section id="action-showcase" class="py-20 px-4 sm:px-8 bg-gradient-to-b from-slate-900 to-brandDark text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="bg-brandAccent/20 text-brandAccent text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider border border-brandAccent/30">
+          <i class="fa-solid fa-atom mr-1"></i> Craftsmanship & Scientific Excellence
+        </span>
+        <h3 class="text-3xl sm:text-4xl font-extrabold mt-3">From Factory Floor to Research Lab in Action</h3>
+        <p class="text-slate-300 mt-3 max-w-2xl mx-auto text-sm sm:text-base">
+          Witness how our dedicated workforce builds robust infrastructure and how scientists safely deploy our instruments for research.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Worker Action Card -->
+        <div class="relative bg-slate-800/80 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl group flex flex-col">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-slate-900">
+            <img src="images/gallery-1.jpg" alt="D.K. Sheet Metal Factory Production" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-brandBlue text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-md flex items-center gap-1.5">
+              <i class="fa-solid fa-users-gear text-brandAccent"></i> Expert Factory Workforce
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl sm:text-2xl font-bold text-white">Precision Sheet Metal Fabrication</h4>
+              <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                Our skilled workers meticulously build heavy-duty structural equipment, custom sheet metal housings, and robust framework assemblies.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-brandAccent font-bold uppercase tracking-wider">
+              <span><i class="fa-solid fa-shield-check mr-1"></i> Quality Assured</span>
+              <span>ISO 9001 Standards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scientist Action Card -->
+        <div class="relative bg-slate-800/80 border border-slate-700/80 rounded-3xl overflow-hidden shadow-2xl group flex flex-col">
+          <div class="relative h-72 sm:h-80 overflow-hidden bg-slate-900">
+            <img src="images/gallery-3.jpg" alt="D.K. Sheet Metal Testing Instruments" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-md flex items-center gap-1.5">
+              <i class="fa-solid fa-microscope text-brandAccent"></i> Researchers & Scientists
+            </div>
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl sm:text-2xl font-bold text-white">Safe & Reliable Testing Environments</h4>
+              <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+                Designed for scientists and laboratory technicians who demand exact physical tolerances for particle analysis, material testing, and thermal processing.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-brandAccent font-bold uppercase tracking-wider">
+              <span><i class="fa-solid fa-flask mr-1"></i> Zero-Hazard Exhaust</span>
+              <span>Advanced Lab Safety</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -361,6 +439,23 @@
       <p>© 2026 D. K. SHEET METAL. All rights reserved. | ISO 9001 : 2015 Certified Manufacturer</p>
     </div>
   </footer>
+
+  <!-- Mobile Navigation Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
 </body>
 </html>
